@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Unity;
+using Unity.Injection;
+using Unity.Resolution;
 
 namespace IOCContainer
 {
@@ -10,7 +9,20 @@ namespace IOCContainer
     {
         static void Main(string[] args)
         {
-            var ehsan = "ser";
+            IUnityContainer unityContainer = new UnityContainer();
+            unityContainer.RegisterType<ICustomerDataAccess, CustomerDataAccess>();
+
+            Console.WriteLine(unityContainer.Resolve<CustomerBussinessLogic>().GetCustomerName("aaa"));
+            Console.ReadLine();
+
+
+            unityContainer.RegisterType<ICustomerDataAccess, CustomerDataAccess2>("Second");
+            Console.WriteLine(unityContainer.Resolve<CustomerBussinessLogic>("Second").GetCustomerName("bbb"));
+            Console.ReadLine();
+
+
+            Console.WriteLine(unityContainer.Resolve<CustomerBussinessLogic>("Second", new DependencyOverride<ICustomerDataAccess>(unityContainer.Resolve<ICustomerDataAccess>())).GetCustomerName("bbb"));
+            Console.ReadLine();
         }
     }
 }
