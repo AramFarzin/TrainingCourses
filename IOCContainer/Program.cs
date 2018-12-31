@@ -10,6 +10,7 @@ namespace IOCContainer
     {
         static void Main(string[] args)
         {
+            var ehsan = "ser";
         }
     }
 }
