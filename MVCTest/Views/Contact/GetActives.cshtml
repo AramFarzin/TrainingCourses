@@ -1,0 +1,35 @@
+﻿@model IEnumerable<MVCTest.Models.Contact>
+
+@{
+    ViewBag.Title = "فعالین";
+}
+
+<h2 dir="rtl">فعالین</h2>
+
+<table class="table" dir="rtl">
+    <tr>
+        <th col="0">
+            @Html.DisplayName("نام")
+        </th>
+        <th col="1" dir="rtl">
+            @Html.DisplayName("نام خانوادگی")
+        </th>
+        <th col="2"></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td col="0">
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td col="1">
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td col="2">
+            @Html.ActionLink("ویرایش", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("حذف", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

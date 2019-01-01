@@ -1,0 +1,42 @@
+﻿@model IEnumerable<MVCTest.Models.Contact>
+
+@{
+    ViewBag.Title = "نمایش";
+}
+
+<h2 dir="rtl">نمایش</h2>
+
+<p dir="rtl">
+    @Html.ActionLink("ایجاد", "Create")
+</p>
+<table class="table" dir="rtl">
+    <tr>
+        <th>
+            @Html.DisplayName("نام")
+        </th>
+        <th>
+            @Html.DisplayName("نام خانوادگی")
+        </th>
+        <th>
+            @Html.DisplayName("وضعیت")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @Html.ActionLink("ویرایش", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("حذف", "Delete", new { id=item.Id })
+        </td>
+    </tr>}
+</table>
