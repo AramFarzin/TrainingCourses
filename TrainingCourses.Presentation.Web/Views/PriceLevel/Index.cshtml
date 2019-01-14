@@ -1,0 +1,57 @@
+﻿@model IEnumerable<PresentationTier.Models.PriceLevel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Min)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Max)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TaxRate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedOn)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Min)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Max)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TaxRate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedOn)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PriceLevelId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PriceLevelId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PriceLevelId })
+        </td>
+    </tr>
+}
+
+</table>

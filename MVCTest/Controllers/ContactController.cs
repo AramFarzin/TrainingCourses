@@ -66,7 +66,7 @@ namespace MVCTest.Controllers
         }
 
         // GET: Contact
-        [HttpPost]
+       // [HttpPost]
         [ActionName("Create")]
         public ActionResult Create(Contact contact)
         {

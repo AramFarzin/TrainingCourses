@@ -1,0 +1,80 @@
+﻿@model PresentationTier.Models.OrderDetail
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>OrderDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ManualPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ManualPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PricePerUoM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PricePerUoM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiscountPerUoM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiscountPerUoM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalAmount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalAmount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalLineItemAmount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalLineItemAmount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedOn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedOn)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
