@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractFactoryTest", "Abst
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingletoneTest", "SingleToneTest\SingletoneTest.csproj", "{5F22066A-44F9-4CBC-8E17-71DAA07B8E02}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompositeTest", "CompositeTest\CompositeTest.csproj", "{192BC75D-4C22-4165-B1BC-4561A485DBDC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +61,10 @@ Global
 		{5F22066A-44F9-4CBC-8E17-71DAA07B8E02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F22066A-44F9-4CBC-8E17-71DAA07B8E02}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F22066A-44F9-4CBC-8E17-71DAA07B8E02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{192BC75D-4C22-4165-B1BC-4561A485DBDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{192BC75D-4C22-4165-B1BC-4561A485DBDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{192BC75D-4C22-4165-B1BC-4561A485DBDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{192BC75D-4C22-4165-B1BC-4561A485DBDC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -71,5 +77,6 @@ Global
 		{2327BC6F-2F4D-4B2C-8A54-8E835F64D379} = {4837A2C3-A82E-4DA2-803F-0711C4E45FB5}
 		{704173ED-51A2-4CF8-92FA-EEC91ED4D9F2} = {4837A2C3-A82E-4DA2-803F-0711C4E45FB5}
 		{5F22066A-44F9-4CBC-8E17-71DAA07B8E02} = {4837A2C3-A82E-4DA2-803F-0711C4E45FB5}
+		{192BC75D-4C22-4165-B1BC-4561A485DBDC} = {4837A2C3-A82E-4DA2-803F-0711C4E45FB5}
 	EndGlobalSection
 EndGlobal
