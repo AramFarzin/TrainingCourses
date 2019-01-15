@@ -9,7 +9,7 @@ namespace PresentationTier.Models
         public Order Order { get; set; }
         public bool ManualPrice { get; set; }
         public UoM UoM { get; set; }
-        public bool PricePerUoM { get; set; }
+        public long PricePerUoM { get; set; }
         public long DiscountPerUoM { get; set; }
         public long Quantity { get; set; }
         public long TotalAmount { get; set; }

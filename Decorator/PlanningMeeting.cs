@@ -2,9 +2,9 @@
 
 namespace Decorator
 {
-    internal class PlanningMeeting : IMeeting
+    internal class PlanningMeeting : AbstractMeeting
     {
-        public void SetMeeting()
+        internal override void SetMeeting()
         {
             Console.WriteLine("Planning meeting");
         }
