@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C1115A80-4B78-4E54-A3B7-7E57DDD20D4E}</ProjectGuid>
+    <ProjectGuid>{992E3911-91FD-43EB-BD2B-0AF65BC1C74F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TrainingCourses.Model</RootNamespace>
-    <AssemblyName>TrainingCourses.Model</AssemblyName>
+    <RootNamespace>TrainingCourses.Core</RootNamespace>
+    <AssemblyName>TrainingCourses.Core</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,33 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Customer\Customer.cs" />
-    <Compile Include="Customer\CustomerRepository.cs" />
-    <Compile Include="Customer\ICustomerRepository.cs" />
-    <Compile Include="Enums\CustomerStatus.cs" />
-    <Compile Include="Enums\OrderStatus.cs" />
-    <Compile Include="Enums\ProductStatus.cs" />
-    <Compile Include="Enums\UserStatus.cs" />
-    <Compile Include="OrderDetail\IOrderDetailRepository.cs" />
-    <Compile Include="OrderDetail\OrderDetailRepository.cs" />
-    <Compile Include="Order\IOrderRepository.cs" />
-    <Compile Include="Order\OrderRepository.cs" />
-    <Compile Include="PriceLevel\IPriceLevelRepository.cs" />
-    <Compile Include="PriceLevel\PriceLevelRepository.cs" />
-    <Compile Include="Product\IProductRepository.cs" />
-    <Compile Include="Product\ProductRepository.cs" />
-    <Compile Include="UoM\IUoMRepository.cs" />
-    <Compile Include="UoM\UoMRepository.cs" />
-    <Compile Include="User\IUserRepository.cs" />
-    <Compile Include="Order\Order.cs" />
-    <Compile Include="OrderDetail\OrderDetail.cs" />
-    <Compile Include="PriceLevel\PriceLevel.cs" />
-    <Compile Include="Product\Product.cs" />
-    <Compile Include="UoM\UoM.cs" />
-    <Compile Include="User\User.cs" />
-    <Compile Include="User\UserRepository.cs" />
+    <Compile Include="IRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

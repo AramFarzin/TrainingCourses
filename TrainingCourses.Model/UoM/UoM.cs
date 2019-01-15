@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace PresentationTier.Models
+namespace TrainingCourses.Model
 {
     public class UoM
     {

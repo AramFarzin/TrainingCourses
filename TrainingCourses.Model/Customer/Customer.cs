@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using PresentationTier.Models.Enums;
 
-namespace PresentationTier.Models
+namespace TrainingCourses.Model
 {
     public class Customer
     {

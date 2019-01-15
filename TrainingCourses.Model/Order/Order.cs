@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using PresentationTier.Models.Enums;
 
-namespace PresentationTier.Models
+namespace TrainingCourses.Model
 {
     public class Order
     {
@@ -19,6 +18,5 @@ namespace PresentationTier.Models
         public DateTimeOffset CreatedOn { get; set; }
         public User CreatedBy { get; set; }
         public IList<OrderDetail> OrderDetails { get; set; }
-
     }
 }

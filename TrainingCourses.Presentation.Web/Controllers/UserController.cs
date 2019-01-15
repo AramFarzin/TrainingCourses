@@ -1,99 +1,39 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Web.Mvc;
-using PresentationTier.Models;
+using PresentationTier.ViewModels;
+using TrainingCourses.Model;
 
 namespace PresentationTier.Controllers
 {
     public class UserController : Controller
     {
-        // GET: User
-        public ActionResult Index()
-        {
-            var users = new List<User>
-            {
-                new User {UserId = new Guid(), UserName = "John"},
-                new User {UserId = new Guid(), UserName = "Steve"},
-                new User {UserId = new Guid(), UserName = "Bill"},
-                new User {UserId = new Guid(), UserName = "Ram"},
-                new User {UserId = new Guid(), UserName = "Ron"},
-                new User {UserId = new Guid(), UserName = "Chris"},
-                new User {UserId = new Guid(), UserName = "Rob"}
-            };
-
-            return View(users);
-        }
-
-        // GET: User/Details/5
-        public ActionResult Details(Guid id)
+        public ActionResult Register()
         {
             return View();
         }
 
-        // GET: User/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: User/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        [ValidateAntiForgeryToken]
+        public ActionResult Register(RegisterViewModel registerViewModel)
         {
-            try
-            {
-                // TODO: Add insert logic here
+            if (ModelState.IsValid)
+                try
+                {
+                    //var userDto = RegisterViewModelMapToUserDto(registerViewModel);
+                    //HttpClientHelper.Post(apiUri, endpoint, userDto);
+                    //return RedirectToAction("Login");
+                    var user = new User(); // TODO : Use DI
+                    var repo = new UserRepository();
+                    repo.Add(user);
+                    return Content("OK");
+                }
+                catch (Exception)
+                {
+                    ViewBag.ErrorMessage = "خطا در ثبت نام لطفا دوباره تلاش کنید";
+                    return View(registerViewModel);
+                }
 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: User/Edit/5
-        public ActionResult Edit(Guid id)
-        {
-            return View();
-        }
-
-        // POST: User/Edit/5
-        [HttpPost]
-        public ActionResult Edit(Guid id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: User/Delete/5
-        public ActionResult Delete(Guid id)
-        {
-            return View();
-        }
-
-        // POST: User/Delete/5
-        [HttpPost]
-        public ActionResult Delete(Guid id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            return View(registerViewModel);
         }
     }
 }

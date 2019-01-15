@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace PresentationTier.Models
+namespace TrainingCourses.Model
 {
     public class PriceLevel
     {
@@ -9,7 +9,7 @@ namespace PresentationTier.Models
         public UoM UoM { get; set; }
         public long Min { get; set; }
         public long Max { get; set; }
-        public Single TaxRate { get; set; }
+        public float TaxRate { get; set; }
         public DateTimeOffset CreatedOn { get; set; }
         public User CreatedBy { get; set; }
     }

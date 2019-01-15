@@ -1,11 +1,11 @@
 ﻿using System;
 
-namespace PresentationTier.Models
+namespace TrainingCourses.Model
 {
     public class OrderDetail
     {
         public Guid OrderDetailId { get; set; }
-        public Product Product{ get; set; }
+        public Product Product { get; set; }
         public Order Order { get; set; }
         public bool ManualPrice { get; set; }
         public UoM UoM { get; set; }

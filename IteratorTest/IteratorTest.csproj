@@ -4,15 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C1115A80-4B78-4E54-A3B7-7E57DDD20D4E}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TrainingCourses.Model</RootNamespace>
-    <AssemblyName>TrainingCourses.Model</AssemblyName>
+    <ProjectGuid>{E6FFBDFD-802C-4F3C-A1CF-286442ABEF5E}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>IteratorTest</RootNamespace>
+    <AssemblyName>IteratorTest</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -40,33 +42,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Customer\Customer.cs" />
-    <Compile Include="Customer\CustomerRepository.cs" />
-    <Compile Include="Customer\ICustomerRepository.cs" />
-    <Compile Include="Enums\CustomerStatus.cs" />
-    <Compile Include="Enums\OrderStatus.cs" />
-    <Compile Include="Enums\ProductStatus.cs" />
-    <Compile Include="Enums\UserStatus.cs" />
-    <Compile Include="OrderDetail\IOrderDetailRepository.cs" />
-    <Compile Include="OrderDetail\OrderDetailRepository.cs" />
-    <Compile Include="Order\IOrderRepository.cs" />
-    <Compile Include="Order\OrderRepository.cs" />
-    <Compile Include="PriceLevel\IPriceLevelRepository.cs" />
-    <Compile Include="PriceLevel\PriceLevelRepository.cs" />
-    <Compile Include="Product\IProductRepository.cs" />
-    <Compile Include="Product\ProductRepository.cs" />
-    <Compile Include="UoM\IUoMRepository.cs" />
-    <Compile Include="UoM\UoMRepository.cs" />
-    <Compile Include="User\IUserRepository.cs" />
-    <Compile Include="Order\Order.cs" />
-    <Compile Include="OrderDetail\OrderDetail.cs" />
-    <Compile Include="PriceLevel\PriceLevel.cs" />
-    <Compile Include="Product\Product.cs" />
-    <Compile Include="UoM\UoM.cs" />
-    <Compile Include="User\User.cs" />
-    <Compile Include="User\UserRepository.cs" />
+    <Compile Include="IContainer.cs" />
+    <Compile Include="IIterator.cs" />
+    <Compile Include="MeetingRepository.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

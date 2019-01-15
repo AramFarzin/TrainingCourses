@@ -1,4 +1,4 @@
-﻿namespace PresentationTier.Models.Enums
+﻿namespace TrainingCourses.Model
 {
     public enum UserStatus
     {
