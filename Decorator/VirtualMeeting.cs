@@ -2,20 +2,18 @@
 
 namespace Decorator
 {
-    internal class VirtualMeeting : AbstractMeeting
+    internal class VirtualMeeting : MeetingDecorator
     {
-        protected AbstractMeeting DecoratorAbstractMeeting;
-        public VirtualMeeting(AbstractMeeting abstractMeeting)
+        public VirtualMeeting(IMeeting meeting) : base(meeting)
         {
-            DecoratorAbstractMeeting = abstractMeeting;
         }
 
-        internal override void SetMeeting()
+        public override void SetMeeting()
         {
             DecoratorAbstractMeeting.SetMeeting();
             // add other codes
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("Virtual Meeting");
-        } 
+        }
     }
 }

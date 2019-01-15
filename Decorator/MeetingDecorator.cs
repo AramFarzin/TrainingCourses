@@ -2,20 +2,15 @@
 
 namespace Decorator
 {
-    internal abstract class MeetingDecorator : AbstractMeeting
+    internal abstract class MeetingDecorator : IMeeting
     {
-        protected AbstractMeeting DecoratorAbstractMeeting;
+        protected IMeeting DecoratorAbstractMeeting;
 
-        protected MeetingDecorator(AbstractMeeting abstractMeeting)
+        protected MeetingDecorator(IMeeting meeting)
         {
-            DecoratorAbstractMeeting = abstractMeeting;
+            DecoratorAbstractMeeting = meeting;
         }
 
-        internal override void SetMeeting()
-        {
-            DecoratorAbstractMeeting.SetMeeting();
-            // add other codes
-            Console.WriteLine("Virtual Meeting");
-        } 
+        public abstract void SetMeeting();
     }
 }
