@@ -10,14 +10,9 @@ namespace TrainingCourses.Core
     public interface IRepository<T>
     {
         IList<T> GetAll();
-        T GetBy(long id);
+        T GetBy(Guid id);
         void Create(T t);
         void Update(T t);
         void Delete(T t);
-    }
-
-    public interface ISyncRepository<T> : IRepository<T>, IRepository
-    {
-        T GetBy(Guid syncId);
     }
 }

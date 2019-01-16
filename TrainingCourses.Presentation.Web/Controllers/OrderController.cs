@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
-using PresentationTier.Models;
+using TrainingCourses.Model.Orders;
 
-namespace PresentationTier.Controllers
+namespace TrainingCourses.Presentation.Web.Controllers
 {
     public class OrderController : Controller
     {
@@ -12,12 +12,12 @@ namespace PresentationTier.Controllers
         {
             var orders = new List<Order>
             {
-                new Order {OrderId = new Guid(), Name = "o1"},
-                new Order {OrderId = new Guid(), Name = "o2"},
-                new Order {OrderId = new Guid(), Name = "o3"},
-                new Order {OrderId = new Guid(), Name = "o4"},
-                new Order {OrderId = new Guid(), Name = "o5"},
-                new Order {OrderId = new Guid(), Name = "o6"},
+                new Order {Id = new Guid(), Name = "o1"},
+                new Order {Id = new Guid(), Name = "o2"},
+                new Order {Id = new Guid(), Name = "o3"},
+                new Order {Id = new Guid(), Name = "o4"},
+                new Order {Id = new Guid(), Name = "o5"},
+                new Order {Id = new Guid(), Name = "o6"},
             };
             return View(orders);
         }

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
-using PresentationTier.Models;
+using TrainingCourses.Model.PriceLevels;
 
-namespace PresentationTier.Controllers
+namespace TrainingCourses.Presentation.Web.Controllers
 {
     public class PriceLevelController : Controller
     {
@@ -12,10 +12,10 @@ namespace PresentationTier.Controllers
         {
             var priceLevels = new List<PriceLevel>
             {
-                new PriceLevel {PriceLevelId = new Guid(), Name = "l1"},
-                new PriceLevel {PriceLevelId = new Guid(), Name = "l2"},
-                new PriceLevel {PriceLevelId = new Guid(), Name = "l3"},
-                new PriceLevel {PriceLevelId = new Guid(), Name = "l4"}
+                new PriceLevel {Id = new Guid(), Name = "l1"},
+                new PriceLevel {Id = new Guid(), Name = "l2"},
+                new PriceLevel {Id = new Guid(), Name = "l3"},
+                new PriceLevel {Id = new Guid(), Name = "l4"}
             };
             return View(priceLevels);
         }

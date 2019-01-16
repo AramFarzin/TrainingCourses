@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
-using PresentationTier.Models;
+using TrainingCourses.Model.Customers;
 
-namespace PresentationTier.Controllers
+namespace TrainingCourses.Presentation.Web.Controllers
 {
     public class CustomerController : Controller
     {
@@ -12,13 +12,13 @@ namespace PresentationTier.Controllers
         {
             var customers = new List<Customer>
             {
-                new Customer {CustomerId = new Guid(), FirstName = "John"},
-                new Customer {CustomerId = new Guid(), FirstName = "Steve"},
-                new Customer {CustomerId = new Guid(), FirstName = "Bill"},
-                new Customer {CustomerId = new Guid(), FirstName = "Ram"},
-                new Customer {CustomerId = new Guid(), FirstName = "Ron"},
-                new Customer {CustomerId = new Guid(), FirstName = "Chris"},
-                new Customer {CustomerId = new Guid(), FirstName = "Rob"}
+                new Customer {Id = new Guid(), FirstName = "John"},
+                new Customer {Id = new Guid(), FirstName = "Steve"},
+                new Customer {Id = new Guid(), FirstName = "Bill"},
+                new Customer {Id = new Guid(), FirstName = "Ram"},
+                new Customer {Id = new Guid(), FirstName = "Ron"},
+                new Customer {Id = new Guid(), FirstName = "Chris"},
+                new Customer {Id = new Guid(), FirstName = "Rob"}
             };
             return View(customers);
         }

@@ -1,4 +1,4 @@
-﻿@model PresentationTier.Models.Order
+﻿@model TrainingCourses.Presentation.Web.Models.Order
 
 @{
     ViewBag.Title = "Edit";
@@ -14,7 +14,7 @@
         <h4>Order</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.OrderId)
+        @Html.HiddenFor(model => model.Id)
 
         <div class="form-group">
             @Html.LabelFor(model => model.OrderNumber, htmlAttributes: new { @class = "control-label col-md-2" })

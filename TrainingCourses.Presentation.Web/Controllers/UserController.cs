@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Web.Mvc;
-using PresentationTier.ViewModels;
-using TrainingCourses.Model;
+using System.Web.Security;
+using TrainingCourses.Presentation.Web.ViewModels;
+using TrainingCourses.Model.Users;
 
-namespace PresentationTier.Controllers
+namespace TrainingCourses.Presentation.Web.Controllers
 {
     public class UserController : Controller
     {
@@ -14,18 +16,16 @@ namespace PresentationTier.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Register(RegisterViewModel registerViewModel)
+        public ActionResult Register([Bind(Include = "Username,Password,ConfirmPassword")] RegisterViewModel registerViewModel)
         {
             if (ModelState.IsValid)
                 try
                 {
                     //var userDto = RegisterViewModelMapToUserDto(registerViewModel);
-                    //HttpClientHelper.Post(apiUri, endpoint, userDto);
-                    //return RedirectToAction("Login");
                     var user = new User(); // TODO : Use DI
                     var repo = new UserRepository();
                     repo.Add(user);
-                    return Content("OK");
+                    return RedirectToAction("Login");
                 }
                 catch (Exception)
                 {
@@ -34,6 +34,39 @@ namespace PresentationTier.Controllers
                 }
 
             return View(registerViewModel);
+        }
+
+
+        public ActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Login([Bind(Include = "Username,Password,RememberMe")] LoginViewModel loginViewModel)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    // TODO : Authenticate User
+                    return RedirectToAction("Index", "Order");
+                }
+                catch (Exception)
+                {
+                    ModelState.AddModelError("username", errorMessage: "نام کاربری یا رمز عبور اشتباه است");
+                    return View(loginViewModel);
+                }
+            }
+            return View(loginViewModel);
+        }
+
+
+        public ActionResult Logout()
+        {
+            FormsAuthentication.SignOut();
+            return RedirectToAction("Login");
         }
     }
 }

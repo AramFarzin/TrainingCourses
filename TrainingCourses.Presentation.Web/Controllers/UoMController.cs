@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
-using PresentationTier.Models;
+using TrainingCourses.Model.UoMs;
 
-namespace PresentationTier.Controllers
+namespace TrainingCourses.Presentation.Web.Controllers
 {
     public class UoMController : Controller
     {
@@ -12,9 +12,9 @@ namespace PresentationTier.Controllers
         {
             var uoMs = new List<UoM>
             {
-                new UoM {UoMId = new Guid(), Name = "inch"},
-                new UoM {UoMId = new Guid(), Name = "kilogram"},
-                new UoM {UoMId = new Guid(), Name = "Meter"},
+                new UoM {Id = new Guid(), Name = "inch"},
+                new UoM {Id = new Guid(), Name = "kilogram"},
+                new UoM {Id = new Guid(), Name = "Meter"},
             };
             return View(uoMs);
         }

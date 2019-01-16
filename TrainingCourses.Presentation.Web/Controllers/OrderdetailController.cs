@@ -1,26 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
-using PresentationTier.Models;
+using TrainingCourses.Model.OrderDetails;
+using TrainingCourses.Model.Orders;
+using TrainingCourses.Model.Products;
 
-namespace PresentationTier.Controllers
+namespace TrainingCourses.Presentation.Web.Controllers
 {
     public class OrderDetailController : Controller
     {
         // GET: OrderDetail
         public ActionResult Index()
         {
-            var order = new Order(){ OrderId = new Guid(), Name = "Test"};
-            var product = new Product(){ ProductId = new Guid(), ProductKey = "Test"};
+            var order = new Order(){ Id = new Guid(), Name = "Test"};
+            var product = new Product(){ Id = new Guid(), ProductKey = "Test"};
             var orderDetails = new List<OrderDetail>
             {
-                new OrderDetail {OrderDetailId = new Guid(), Order = order, Product = product},
-                new OrderDetail {OrderDetailId = new Guid(), Order = order, Product = product},
-                new OrderDetail {OrderDetailId = new Guid(), Order = order, Product = product},
-                new OrderDetail {OrderDetailId = new Guid(), Order = order, Product = product},
-                new OrderDetail {OrderDetailId = new Guid(), Order = order, Product = product},
-                new OrderDetail {OrderDetailId = new Guid(), Order = order, Product = product},
-                new OrderDetail {OrderDetailId = new Guid(), Order = order, Product = product}
+                new OrderDetail {Id = new Guid(), Order = order, Product = product},
+                new OrderDetail {Id = new Guid(), Order = order, Product = product},
+                new OrderDetail {Id = new Guid(), Order = order, Product = product},
+                new OrderDetail {Id = new Guid(), Order = order, Product = product},
+                new OrderDetail {Id = new Guid(), Order = order, Product = product},
+                new OrderDetail {Id = new Guid(), Order = order, Product = product},
+                new OrderDetail {Id = new Guid(), Order = order, Product = product}
             };
             return View(orderDetails);
         }

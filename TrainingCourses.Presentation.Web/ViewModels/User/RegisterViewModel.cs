@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace PresentationTier.ViewModels
+namespace TrainingCourses.Presentation.Web.ViewModels
 {
     public class RegisterViewModel
     {

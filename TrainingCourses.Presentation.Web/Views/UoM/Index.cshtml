@@ -1,4 +1,4 @@
-﻿@model IEnumerable<PresentationTier.Models.UoM>
+﻿@model IEnumerable<TrainingCourses.Presentation.Web.Models.UoM>
 
 @{
     ViewBag.Title = "Index";
@@ -35,9 +35,9 @@
             @Html.DisplayFor(modelItem => item.CreatedOn)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.UoMId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.UoMId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.UoMId })
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
         </td>
     </tr>
 }

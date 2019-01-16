@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
-using PresentationTier.Models;
+using TrainingCourses.Model.Products;
 
-namespace PresentationTier.Controllers
+namespace TrainingCourses.Presentation.Web.Controllers
 {
     public class ProductController : Controller
     {
@@ -12,10 +12,10 @@ namespace PresentationTier.Controllers
         {
             var products = new List<Product>
             {
-                new Product {ProductId = new Guid(), Name = "p1"},
-                new Product {ProductId = new Guid(), Name = "p2"},
-                new Product {ProductId = new Guid(), Name = "p3"},
-                new Product {ProductId = new Guid(), Name = "p4"}
+                new Product {Id = new Guid(), Name = "p1"},
+                new Product {Id = new Guid(), Name = "p2"},
+                new Product {Id = new Guid(), Name = "p3"},
+                new Product {Id = new Guid(), Name = "p4"}
             };
             return View(products);
         }

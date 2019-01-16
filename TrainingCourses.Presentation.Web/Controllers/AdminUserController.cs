@@ -1,9 +1,9 @@
 ﻿//using System;
 //using System.Collections.Generic;
 //using System.Web.Mvc;
-//using PresentationTier.Models;
+//using TrainingCourses.Presentation.Web.Models;
 
-//namespace PresentationTier.Controllers
+//namespace TrainingCourses.Presentation.Web.Controllers
 //{
 //    public class AdminUserController : Controller
 //    {
