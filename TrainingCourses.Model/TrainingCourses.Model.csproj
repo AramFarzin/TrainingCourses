@@ -42,16 +42,10 @@
   <ItemGroup>
     <Compile Include="Customers\Customer.cs" />
     <Compile Include="Customers\CustomerRepository.cs" />
-    <Compile Include="Customers\ICustomerRepository.cs" />
-    <Compile Include="OrderDetails\IOrderDetailRepository.cs" />
     <Compile Include="OrderDetails\OrderDetailRepository.cs" />
-    <Compile Include="Orders\IOrderRepository.cs" />
     <Compile Include="Orders\OrderRepository.cs" />
-    <Compile Include="PriceLevels\IPriceLevelRepository.cs" />
     <Compile Include="PriceLevels\PriceLevelRepository.cs" />
-    <Compile Include="Products\IProductRepository.cs" />
     <Compile Include="Products\ProductRepository.cs" />
-    <Compile Include="UoMs\IUoMRepository.cs" />
     <Compile Include="UoMs\UoMRepository.cs" />
     <Compile Include="Users\IUserRepository.cs" />
     <Compile Include="Orders\Order.cs" />

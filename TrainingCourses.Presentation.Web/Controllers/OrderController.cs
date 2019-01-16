@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Web.Mvc;
 using TrainingCourses.Model.Orders;
+using TrainingCourses.Model.Users;
 
 namespace TrainingCourses.Presentation.Web.Controllers
 {
@@ -10,16 +11,8 @@ namespace TrainingCourses.Presentation.Web.Controllers
         // GET: Order
         public ActionResult Index()
         {
-            var orders = new List<Order>
-            {
-                new Order {Id = new Guid(), Name = "o1"},
-                new Order {Id = new Guid(), Name = "o2"},
-                new Order {Id = new Guid(), Name = "o3"},
-                new Order {Id = new Guid(), Name = "o4"},
-                new Order {Id = new Guid(), Name = "o5"},
-                new Order {Id = new Guid(), Name = "o6"},
-            };
-            return View(orders);
+            var repo = new OrderRepository();
+            return View(repo.GetAll());
         }
 
         // GET: Order/Details/5

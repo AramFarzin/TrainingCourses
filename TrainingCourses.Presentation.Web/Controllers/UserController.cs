@@ -16,12 +16,11 @@ namespace TrainingCourses.Presentation.Web.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Register([Bind(Include = "Username,Password,ConfirmPassword")] RegisterViewModel registerViewModel)
+        public ActionResult Register([Bind(Include = "FirstName,LastName,Username,Password,ConfirmPassword")] RegisterViewModel registerViewModel)
         {
             if (ModelState.IsValid)
                 try
                 {
-                    //var userDto = RegisterViewModelMapToUserDto(registerViewModel);
                     var user = new User(); // TODO : Use DI
                     var repo = new UserRepository();
                     repo.Add(user);

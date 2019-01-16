@@ -1,39 +1,37 @@
-﻿@model IEnumerable<TrainingCourses.Presentation.Web.Models.Order>
+﻿
+@model IEnumerable<TrainingCourses.Model.Orders.Order>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "سفارشات";
 }
 
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("ایجاد", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.OrderNumber)
+            @Html.DisplayName("شماره سفارش")
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Name)
+            @Html.DisplayName("نام سفارش")
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.TotalTax)
+            @Html.DisplayName("مالیات")
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.DiscountPerOrder)
+            @Html.DisplayName("تخفیف کلی")
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.TotalDiscount)
+            @Html.DisplayName("جمع تخفیف ها")
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.TotalAmount)
+            @Html.DisplayName("مبلغ کل")
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Description)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CreatedOn)
+            @Html.DisplayName("شرح")
         </th>
         <th></th>
     </tr>
@@ -62,12 +60,9 @@
             @Html.DisplayFor(modelItem => item.Description)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.CreatedOn)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            @Html.ActionLink("ویرایش", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("جزییات", "Details", new { id=item.Id }) |
+            @Html.ActionLink("حذف", "Delete", new { id=item.Id })
         </td>
     </tr>
 }
